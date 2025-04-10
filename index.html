@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ApkJoy - Your friend for apps on your phone</title>
   <link rel="stylesheet" href="src/style.css">
-  <link rel="icon" href="public/icon_rounded.svg" type="image/svg+xml">
+  <link rel="icon" href="/icon_rounded.svg" type="image/svg+xml">
   <meta name="description" content="ApkJoy - Your friend for apps on your phone">
   <meta name="keywords" content="ApkJoy, apps, mobile, download, Android">
   <meta name="author" content="Shihan Rishad">
@@ -20,6 +20,34 @@
 </head>
 <body>
   <div id="progress-bar"></div>
+  <section id="focus">
+    <div class="part">
+      <div class="focus-image">
+        <img src="/icon_rounded.svg" alt="ApkJoy" width="200" height="200">
+      </div>
+      <h1>ApkJoy</h1>
+      <p>Your friend for apps on your phone</p>
+    </div>
+    <div class="part">
+      <h3>Extract, Save, and share your apps</h3>
+      <div class="CAT">
+        <a href="https://github.com/ShihanRishad/ApkJoy" class="CAT-li">
+          <button class="btn action">
+            <img src="/github-mark-white.svg" alt="github" width="20" height="20">
+            Check on GitHub
+          </button>
+        </a>
+        <a href="#download" class="CAT-link">
+        <button class="btn action">
+            <span class="material-symbols-rounded">
+              download
+            </span>
+            Download ApkJoy
+          </button>
+        </a> 
+      </div>
+    </div>
+  </section>
   <header>
     <div id="headcontent">
       <nav>
@@ -32,24 +60,9 @@
       </nav>
     </div>
   </header>
-  <section id="focus">
-    <div class="focus-image">
-      <img src="public/icon_rounded.svg" alt="ApkJoy" width="200" height="200">
-    </div>
-    <h1>ApkJoy</h1>
-    <p>Your friend for apps on your phone</p>
-      <a href="#download">
-      <button class="btn action">
-          <span class="material-symbols-rounded">
-            download
-          </span>
-        Download
-      </button>
-      </a> 
-  </section>
 
   <section id="intro" class="section">
-    <h2 class="sectionh">Introduction</h2>
+    <h2 class="sectionh" align="center">Introduction</h2>
     <div class="infos">
       <div class="box">
         <h3 class="boxh">What is ApkJoy?</h3>
@@ -67,15 +80,46 @@
           </p>
         </div>
       </div>
+      <div class="box">
+        <img src="/screenshot_list_system.png" alt="screenshot_main" class="boximg">
+      </div>
     </div>
   </section>
 
-  <section id="about">
-    <h2>About ApkJoy</h2>
-    <p>ApkJoy is your trusted companion for discovering and downloading apps for your Android device. We ensure secure and fast downloads with a user-friendly interface.</p>
+  <section id="about" class="section">
+    <h2 class="sectionh" align="center">
+      About ApkJoy
+    </h2>
+    <div class="infos">
+      <div class="box">
+        <h3 class="boxh">Features</h3>
+        <div class="boxTxt">
+          ApkJoy offers a range of features to enhance your app experience. Some of the key features include:
+          <ul type="circle">
+            <li><strong>Extract: </strong> Save an extract the APK of the apps on your phone.</li>
+            <li><strong>Share: </strong>Quickly share your extracted apps in one tap</li>
+            <li><strong>Customizability: </strong>Make the app yours, change to your own theme and color.</li>
+            <li><strong>Lightweight: </strong> ApkJoy is designed to be lightweight and fast, ensuring a smooth user experience.</li>
+            <li><strong>Open Source: </strong> ApkJoy is open source, allowing users to contribute and improve the app.</li>
+            <li><strong>Privacy: </strong> ApkJoy does not collect any personal data or require unnecessary permissions.</li>
+            <li><strong>Free Forever: </strong> No sign in, no payment, just use it.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="box">
+        <h3 class="boxh">Compatibility</h3>
+        <div class="boxTxt">
+          <p>
+            ApkJoy is compatible with all Android devices running Android 5.0 (Lollipop) and above.
+          </p>
+        </div>
+      </div>
+      <div class="box">
+        <img src="/screenshot_list_system.png" alt="screenshot_main" class="boximg">
+      </div>
   </section>
 
-  <section id="download">
+  <section id="download" class="section">
     <h2>Download ApkJoy</h2>
     <p>Click the button below to download the latest version of ApkJoy.</p>
     <button class="btn primary">
@@ -83,9 +127,8 @@
     </button>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="section">
     <h2>Contact Us</h2>
-    <p>Have questions? Reach out to us at <a href="mailto:support@apkjoy.com">support@apkjoy.com</a>.</p>
   </section>
 
   <footer>

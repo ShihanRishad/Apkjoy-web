@@ -31,20 +31,23 @@ focusimgdiv.addEventListener('click', function () {
     }, 1000);
 });
 
-function animateOnScroll(selector, animationClass = "show", options = { threshold: 0.2 }) {
+// Function to animate elements on scroll
+function animateOnScroll(selector, animationClass = "show", options = { threshold: 0.5 }) {
     const elements = document.querySelectorAll(selector);
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add(animationClass);
+                entry.target.style.opacity = "1";
                 observer.unobserve(entry.target); 
             }
         });
     }, options);
     elements.forEach(el => observer.observe(el));
-}
+} 
 
-animateOnScroll('.notshow', 'flyin');
+// Apply animation to .box elements
+animateOnScroll('.box', 'flyin');
 
 
 
@@ -106,12 +109,34 @@ function setupActiveNav() {
             }, 500); 
         });
     });
-
-    const observer = new IntersectionObserver((entries) => {
+        // Observer for the #intro and #about sections
+    const introObserver = new IntersectionObserver((entries) => {
         if (isUserScrolling) return; 
-
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
+            if (
+                (entry.target.id === 'intro' || entry.target.id == 'about') 
+                && entry.intersectionRatio > 0.3) {
+                navLinks.forEach(link => link.classList.remove('active'));
+                const activeLink = document.querySelector(`#headcontent nav ul li a[href="#${entry.target.id}"]`);
+                if (activeLink) {
+activeLink.classList.add('active');
+activeLink.parentElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'nearest',
+                        inline: 'center',
+                    });
+                }
+            }
+        });
+    }, {
+        threshold: [0.3, 0.5],
+        rootMargin: "-50px 0px 0px 0px"
+    });
+      // Observer for the other sections
+     const otherObserver = new IntersectionObserver((entries) => {
+        if (isUserScrolling) return; 
+        entries.forEach(entry => {
+            if (entry.isIntersecting && entry.target.id !== 'intro') {
                 navLinks.forEach(link => link.classList.remove('active'));
                 const activeLink = document.querySelector(`#headcontent nav ul li a[href="#${entry.target.id}"]`);
                 if (activeLink) {
@@ -124,9 +149,17 @@ function setupActiveNav() {
                 }
             }
         });
-    }, { threshold: 0.5 });
+    }, {
+        threshold: 0.5
+    });
 
-    sections.forEach(section => observer.observe(section));
+    sections.forEach(section => {
+        if (section.id === 'intro') {
+            introObserver.observe(section);
+        } else {
+            otherObserver.observe(section);
+        }
+    });
 }
 
 setupActiveNav();
