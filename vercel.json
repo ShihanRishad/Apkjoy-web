@@ -1,6 +1,10 @@
 {
-    "rewrites": [
-      { "source": "/(.*)", "destination": "/" }
-    ]
-  }
-  
+  "trailingSlash": true,
+  "rewrites": [
+    { "source": "/about/", "destination": "/" },
+    { "source": "/download/", "destination": "/" },
+    { "source": "/help/", "destination": "/" },
+    { "source": "/(.*)/", "destination": "/" },
+    { "source": "/(.*)", "destination": "/" }
+  ]
+}
