@@ -32,6 +32,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 100%;
 
   }
 }
@@ -193,7 +194,7 @@ header.visible {
   height: calc(100vh - 5rem);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 }
 
@@ -232,7 +233,6 @@ header.visible {
 }
 
 .part {
-  height: 100%;
   width: 50vh;
   margin: 0;
   padding: 0;
