@@ -1,14 +1,9 @@
 {
-  "trailingSlash": true,
-  "rewrites": [
-    { "source": "/about/", "destination": "/about/index.html" },
-    { "source": "/download/", "destination": "/download/index.html" },
-    { "source": "/help/", "destination": "/help/index.html" },
-    { "source": "/public/(.*)", "destination": "/public/$1" },
-    { "source": "/assets/(.*)", "destination": "/public/assets/$1" },
-    { "source": "/icons/(.*)", "destination": "/public/assets/icons/$1" },
-    { "source": "/(.*)/", "destination": "/$1/index.html" },
-    { "source": "/(.*)", "destination": "/$1" },
-    { "source": "/", "destination": "/index.html" }
-  ]
-}
+    "rewrites": [
+      {
+        "source": "/(.*)",
+        "destination": "/index.html"
+      }
+    ]
+  }
+  
