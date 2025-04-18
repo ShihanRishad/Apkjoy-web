@@ -1,0 +1,95 @@
+@keyframes flyheaderin {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+#headcontent {
+    width: 100%;
+    max-width: 100vw;
+    animation: flyheaderin 0.5s ease-in-out;
+}
+
+.pageheader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    z-index: 100;
+    transition: transform 0.3s ease-in-out;
+}
+.pageheader h2 {
+    margin: 0rem 0.5rem 0.5rem 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.pageheader h2 img {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+}
+
+
+.downloadcontainer h2 {
+    margin: 1rem 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+a {
+    color: #ffffff !important;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#headcontent a h2 {
+    color: #ffffff !important;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#headcontent .left a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    background: transparent;
+    transition: width 0.3s;
+
+}
+
+.downloadbutton {
+    display: flex;
+    justify-content: center;
+}
+
+.downloadbutton::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    background: transparent;
+    transition: width 0.3s;
+}
+.downloadbutton:hover::after {
+    width: 0;
+    height: 0;
+    background: transparent;
+}

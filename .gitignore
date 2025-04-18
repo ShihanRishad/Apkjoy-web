@@ -38,3 +38,7 @@ Thumbs.db
 ehthumbs.db
 # Linux
 *~
+
+# Extra files
+/extra/
+# Ignore all files in the extra director

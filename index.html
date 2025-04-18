@@ -1,9 +1,11 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ApkJoy - Your friend for apps on your phone</title>
   <link rel="stylesheet" href="src/style.css">
+  <link rel="stylesheet" href="global.css">
   <link rel="icon" href="/icon_rounded.svg" type="image/svg+xml">
   <meta name="description" content="ApkJoy - Your friend for apps on your phone">
   <meta name="keywords" content="ApkJoy, apps, mobile, download, Android">
@@ -12,18 +14,17 @@
   <meta property="og:title" content="ApkJoy - Your friend for apps on your phone">
   
   <!-- Fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=download" />
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=download" /> -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
 </head>
 <body>
-  <div id="progress-bar"></div>
   <section id="focus">
     <div class="part">
       <div class="focus-image">
-        <img src="/icon_rounded.svg" alt="ApkJoy" width="200" height="200">
+        <img src="/assets/icon_rounded.svg" alt="ApkJoy" width="200" height="200">
       </div>
       <h1>ApkJoy</h1>
       <p>Your friend for apps on your phone</p>
@@ -31,9 +32,9 @@
     <div class="part">
       <h3>Extract, Save, and share your apps</h3>
       <div class="CAT">
-        <a href="https://github.com/ShihanRishad/ApkJoy" class="CAT-li">
+        <a href="https://github.com/ShihanRishad/ApkJoy" class="CAT-li" target="_blank">
           <button class="btn action">
-            <img src="/github-mark-white.svg" alt="github" width="20" height="20">
+            <img src="/assets/github-mark-white.svg" alt="github" width="20" height="20">
             Check on GitHub
           </button>
         </a>
@@ -53,9 +54,10 @@
       <nav>
         <ul>
           <li><a href="#intro">Introduction</a></li>
+          <li><a href="#features">Features</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#download">Download</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#help">Help</a></li>
         </ul>
       </nav>
     </div>
@@ -81,8 +83,80 @@
         </div>
       </div>
       <div class="box">
-        <img src="/screenshot_list_system.png" alt="screenshot_main" class="boximg">
+        <img src="/assets/screenshot_detail2.webp" alt="screenshot_main" class="boximg">
+        <br><span style="opacity: 0.9; font-style: italic;">List Page with System Apps</span>
       </div>
+    </div>
+  </section>
+
+  <section id="features" class="section">
+    <h2 class="sectionh" align="center">Features</h2>
+    <div class="infos">
+      <div class="box">
+        <h3 class="boxh">Extract APKs</h3>
+        <div class="boxTxt">
+          <p>
+            ApkJoy allows you to extract the APK files of the apps installed on your device. This feature is useful for backing up apps or sharing them with others.
+          </p>
+        </div>
+      </div>
+      <div class="box">
+        <h3 class="boxh">Share APKs</h3>
+        <div class="boxTxt">
+          <p>
+            With ApkJoy, you can easily share the extracted APK files with your friends or family. This feature makes it convenient to share apps without relying on third-party app stores.
+          </p>
+        </div>
+      </div>
+      <div class="box">
+        <h3 class="boxh">Customizability</h3>
+        <div class="boxTxt">
+          <p>
+            ApkJoy offers a range of customization options, allowing you to personalize the app according to your preferences. You can change themes, colors, and more.
+          </p>
+        </div>
+      </div>
+      <div class="box">
+        <h3 class="boxh">Search</h3>
+        <div class="boxTxt">
+          <p>
+            ApkJoy provides a powerful search feature that allows you to quickly find the apps you are looking for. You can search by app name.
+          </p>
+        </div>
+      </div>
+      <div class="box">
+        <h3 class="boxh">Lightweight</h3>
+        <div class="boxTxt">
+          <p>
+            ApkJoy is made with flutter, and designed to be lightweight and fast, ensuring a smooth user experience. It doesn't consume unnecessary resources, making it suitable for most devices.
+          </p>
+        </div>
+      </div>
+      <div class="box">
+        <h3 class="boxh">Open Source</h3>
+        <div class="boxTxt">
+          <p>
+            ApkJoy is an open-source project, allowing users to contribute to its development. You can find the source code on <a href="https://www.github.com/ShihanRishad/ApkJoy">GitHub</a> and participate in improving the app.
+          </p>
+        </div>
+      </div>
+      <div class="box">
+        <h3 class="boxh">Privacy</h3>
+        <div class="boxTxt">
+          <p>
+            ApkJoy respects your privacy. It does not collect any personal data or require unnecessary permissions. Your data is safe with ApkJoy.
+          </p>
+        </div>
+      </div>
+      <div class="box">
+        <h3 class="boxh">Free Forever</h3>
+        <div class="boxTxt">
+          <p>
+            ApkJoy is completely free to use. There are no hidden fees, subscriptions, or in-app purchases. Enjoy the app without any restrictions.
+          </p>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -92,21 +166,6 @@
     </h2>
     <div class="infos">
       <div class="box">
-        <h3 class="boxh">Features</h3>
-        <div class="boxTxt">
-          ApkJoy offers a range of features to enhance your app experience. Some of the key features include:
-          <ul type="circle">
-            <li><strong>Extract: </strong> Save an extract the APK of the apps on your phone.</li>
-            <li><strong>Share: </strong>Quickly share your extracted apps in one tap</li>
-            <li><strong>Customizability: </strong>Make the app yours, change to your own theme and color.</li>
-            <li><strong>Lightweight: </strong> ApkJoy is designed to be lightweight and fast, ensuring a smooth user experience.</li>
-            <li><strong>Open Source: </strong> ApkJoy is open source, allowing users to contribute and improve the app.</li>
-            <li><strong>Privacy: </strong> ApkJoy does not collect any personal data or require unnecessary permissions.</li>
-            <li><strong>Free Forever: </strong> No sign in, no payment, just use it.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="box">
         <h3 class="boxh">Compatibility</h3>
         <div class="boxTxt">
           <p>
@@ -115,24 +174,155 @@
         </div>
       </div>
       <div class="box">
-        <img src="/screenshot_list_system.png" alt="screenshot_main" class="boximg">
+        <h3 class="boxh">License</h3>
+        <div class="boxTxt">
+          <p>
+            ApkJoy is licensed under the MIT License. You can use, modify, and distribute the app as per the terms of the license.
+          </p>
+        </div>
+      </div>
+      <div class="box">
+        <h3 class="boxh">Contributing</h3>
+        <div class="boxTxt">
+          <p>
+            If you want to contribute to ApkJoy, you can fork the repository on GitHub and submit a pull request. We welcome contributions from the community.
+          </p>
+        </div>
+      </div>
+      <div class="box">
+        <h3 class="boxh">Developer</h3>
+        <div class="boxTxt">
+          <p>
+            ApkJoy is created by Shihan Rishad, a passionate developer who loves creating Full Stack Web Apps, Cross-Platform Native apps, and exploring new things.
+          </p>
+        </div>
+      </div>
+      <div class="box">
+        <h3 class="boxh">Developer</h3>
+        <div class="boxTxt">
+          <p>
+            ApkJoy is created by Shihan Rishad, a passionate developer who loves creating Full Stack Web Apps, Cross-Platform Native apps, and exploring new things.
+          </p>
+        </div>
+      </div>
+      <div class="screenshots">
+        <div class="box">
+          <img src="/assets/screenshot_list.webp" alt="screenshot_main" class="boximg">
+          <br><span>List Page with only Installed apps</span>
+        </div>
+        <div class="box">
+          <img src="/assets/screenshot_detail2.webp" alt="Detail Page" class="boximg">
+          <br><span>Detail Page with Share and Extract</span>
+        </div>
       </div>
   </section>
 
   <section id="download" class="section">
-    <h2>Download ApkJoy</h2>
-    <p>Click the button below to download the latest version of ApkJoy.</p>
-    <button class="btn primary">
-      <a href="#">Download ApkJoy</a>
-    </button>
+    <h2 class="sectionh" align="center">Download ApkJoy</h2>
+    <div class="infos">
+      <div class="box">
+        <h3 class="boxh">Download APK</h3>
+        <div class="boxTxt">
+          <p>Download the APK file for ApkJoy, then open it to start installing it 🚀</p>
+          <a href="/download/">
+            <button class="btn action">
+              <span class="material-symbols-rounded">
+                open_in_new
+              </span>
+              Download ApkJoy
+            </button>
+          </a>
+        </div>
+      </div>
+      <div class="box">
+        <h3 class="boxh">How to install?</h3>
+        <div class="boxTxt" id="installTxt">
+          <p>To install ApkJoy, follow these steps:</p>
+          <ol>
+            <li>Download the APK file from the link above.</li>
+            <li>Open the downloaded APK file.</li>
+            <li>Follow the on-screen instructions to complete the installation.</li>
+            <li>Once installed, open ApkJoy and start using it!</li>
+          </ol>
+          <p>If you encounter any issues during installation, make sure to enable "Install from Unknown Sources" in your device's settings.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="contact" class="section">
-    <h2>Contact Us</h2>
+  <section id="help" class="section">
+    <h2 class="sectionh" align="center">Help</h2>
+    <div class="infos">
+      <div class="box">
+        <h3 class="boxh">Having issues?</h3>
+        <div class="boxTxt">
+          <p>
+            If you're having issues, checkout our documentation. Here are somethings to check if issues happening while install:
+          </p>
+          <ul>
+            <li>Make sure you have enabled "Install from Unknown Sources" in your device's settings.</li>
+            <li>Check if your device has enough storage space for the installation.</li>
+            <li>If you encounter any errors, try restarting your device and then attempt the installation again.</li>
+            <li>This app might not work on older android devices.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="box">
+        <h3 class="boxh">Contact</h3>
+        <div class="boxTxt">
+          <p>If you find any bug, or suggest features/improvements, feel free to reach at GitHub by creating an issue.</p>
+          <a href="https://github.com/ShihanRishad/ApkJoy">Go to the repository on GitHub</a>
+          <p align="left">
+            Here's how do create an issue:
+          </p>
+          <ol>
+            <li>Go to the Issues tab in the repository.</li>
+            <li>Click on "New Issue".</li>
+            <li>Provide a clear title and description of the issue.</li>
+            <li>Click on "Submit new issue".</li>
+          </ol>
+          <p>We appreciate your feedback and contributions!</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 ApkJoy. All rights reserved.</p>
+    <div class="foottop footver">
+      <div class="footleft footpages">
+        <h3>Pages</h3>
+        <div class="sidecontent">
+          <a href="/">Home</a>
+          <a href="download/">Download</a>
+          <a href="/about/">About</a>
+          <a href="/help/">Help</a>
+        </div>
+      </div>
+      <div class="footright">
+        <div class="sidecontent">
+          <a href="https://www.github.com/ShihanRishad/ApkJoy" target="_blank">
+            <img src="/assets/icons/github.svg" alt="github" width="20" height="20">
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.sololearn.com/en/profile/31317959">
+            <img src="/assets/icons/SoloLearn.svg" alt="sololearn" height="20">
+          </a>
+          <a href="https://peerlist.io/shihan" target="_blank">
+            <img src="/assets/icons/peerlist.svg" alt="peerlist" width="20" height="20">
+            <span>Peerlist</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footbottom footver">
+      <div class="footleft">
+      </div>
+      <div style="margin: 1rem;">
+        Made with 💚 by Shihan
+      </div>
+      <div class="footright">
+      </div>
+    </div>
   </footer>
 
   <script src="src/script.js"></script>

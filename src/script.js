@@ -49,35 +49,8 @@ function animateOnScroll(selector, animationClass = "show", options = { threshol
 // Apply animation to .box elements
 animateOnScroll('.box', 'flyin');
 
-
-
-function updateProgressBar() {
-  const progressBar = document.getElementById('progress-bar');
-  const scrollTop = window.scrollY;
-  const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  const scrollPercentage = (docHeight > 0 ? (scrollTop / docHeight) * 100 : 0);
-  progressBar.style.width = `${scrollPercentage}%`;
-}
-
 let lastScrollY = window.scrollY;
 const header = document.querySelector('header');
-
-window.addEventListener('scroll', () => {
-//   if (window.scrollY > lastScrollY && window.scrollY > header.offsetHeight) {
-//     // Scrolling down
-//     header.classList.add('hidden');
-//     header.classList.remove('visible');
-//   } else {
-//     // Scrolling up
-//     header.classList.add('visible');
-//     header.classList.remove('hidden');
-//   }
-//   lastScrollY = window.scrollY;
-  updateProgressBar();
-});
-
-
-window.addEventListener('load', updateProgressBar);
 
 
 function setupActiveNav() {
@@ -109,34 +82,13 @@ function setupActiveNav() {
             }, 500); 
         });
     });
-        // Observer for the #intro and #about sections
-    const introObserver = new IntersectionObserver((entries) => {
+    
+    // Observer for #intro and #about with a custom rootMargin
+    const customObserver = new IntersectionObserver((entries) => {
         if (isUserScrolling) return; 
         entries.forEach(entry => {
-            if (
-                (entry.target.id === 'intro' || entry.target.id == 'about') 
-                && entry.intersectionRatio > 0.3) {
-                navLinks.forEach(link => link.classList.remove('active'));
-                const activeLink = document.querySelector(`#headcontent nav ul li a[href="#${entry.target.id}"]`);
-                if (activeLink) {
-activeLink.classList.add('active');
-activeLink.parentElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'nearest',
-                        inline: 'center',
-                    });
-                }
-            }
-        });
-    }, {
-        threshold: [0.3, 0.5],
-        rootMargin: "-50px 0px 0px 0px"
-    });
-      // Observer for the other sections
-     const otherObserver = new IntersectionObserver((entries) => {
-        if (isUserScrolling) return; 
-        entries.forEach(entry => {
-            if (entry.isIntersecting && entry.target.id !== 'intro') {
+            console.log(entry.target.id, entry.intersectionRatio); // Debug log
+            if ((entry.target.id === 'intro' || entry.target.id === 'about' || entry.target.id === 'features') && entry.intersectionRatio > 0.2) {
                 navLinks.forEach(link => link.classList.remove('active'));
                 const activeLink = document.querySelector(`#headcontent nav ul li a[href="#${entry.target.id}"]`);
                 if (activeLink) {
@@ -150,12 +102,35 @@ activeLink.parentElement.scrollIntoView({
             }
         });
     }, {
-        threshold: 0.5
+        threshold: [0.2, 0.5],
+        rootMargin: "-50px 0px 0px 0px"
+    });
+    
+    // Observer for the other sections
+    const otherObserver = new IntersectionObserver((entries) => {
+        if (isUserScrolling) return; 
+        entries.forEach(entry => {
+            if (entry.isIntersecting && entry.target.id !== 'intro' && entry.target.id !== 'about') {
+                navLinks.forEach(link => link.classList.remove('active'));
+                const activeLink = document.querySelector(`#headcontent nav ul li a[href="#${entry.target.id}"]`);
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                    activeLink.parentElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'nearest',
+                        inline: 'center',
+                    });
+                }
+            }
+        });
+    }, {
+        threshold: 0.3,
+        rootMargin: "-50px 0px 0px 0px"
     });
 
     sections.forEach(section => {
-        if (section.id === 'intro') {
-            introObserver.observe(section);
+        if (section.id === 'intro' || section.id === 'about' || section.id === 'features') {
+            customObserver.observe(section);
         } else {
             otherObserver.observe(section);
         }

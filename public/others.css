@@ -1,0 +1,160 @@
+a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffffffe3;
+    border-radius: 10px;
+    transition: width 0.3s;
+}
+a:hover::after {
+    width: 100%;
+}
+
+a:hover {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a:active {
+    text-decoration: none;
+}
+a:focus {
+    text-decoration: none;
+}
+a {
+    color: #ffffff !important;
+    text-decoration: none;
+    transition: color .3s;
+}
+
+@keyframes flyheaderin {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+
+#headcontent {
+    width: 100%;
+    max-width: 100vw;
+    animation: flyheaderin 0.5s ease-in-out;
+    transition: height 0.3s ease-in-out;
+}
+
+
+@media screen and (max-width: 471px) {
+    #headcontent {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 1rem;
+        height: 72px;
+    }
+    #headcontent nav {
+        padding: 0.5rem;
+    }
+    
+    
+}
+
+.pageheader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    z-index: 100;
+    transition: transform 0.3s ease-in-out;
+}
+.pageheader h2 {
+    margin: 0rem 0.5rem 0.5rem 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.pageheader h2 img {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+}
+
+#headcontent a h2 {
+    color: #ffffff !important;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#headcontent .left a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    background: transparent;
+    transition: width 0.3s;
+
+}
+
+.container {
+    background-color: #4f64649d;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: inset 0 0px 2px 0px rgba(255, 255, 255, 0.274);
+    margin: 2rem 2vw;
+    padding: 1rem 2em 2rem 2rem;
+    text-align: left;
+    backdrop-filter: blur(20px);
+}
+
+.container p, .container a {
+    margin: 1rem 0rem;
+}
+
+.container pre {
+    background-color: #28323365;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0px 2px 0px rgba(255, 255, 255, 0.274);
+    overflow-x: auto;
+    width: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: #ffffff94 #28323300;
+}
+
+.container pre::-webkit-scrollbar {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 60vw;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95vw;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        width: 95vw;
+        margin: 0 auto;
+    }
+}
+
