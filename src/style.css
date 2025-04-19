@@ -342,6 +342,10 @@ section ol li {
   line-height: 1.5;
 }
 
+.techTxt {
+  align-items: flex-start;
+}
+
 .boxTxt p {
   text-align: left;
   width: 100%;
