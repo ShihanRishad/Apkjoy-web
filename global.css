@@ -25,6 +25,10 @@
     --box-color: #334949c5;
   }
 
+  ::selection {
+    background-color: var(--action-color);
+  }
+
   
 body {
     font-family: 'Overlock', 'Arial', sans-serif;

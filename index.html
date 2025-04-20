@@ -89,6 +89,7 @@
           <li><a href="#features">Features</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#download">Download</a></li>
+          <li><a href="#roadmap">Roadmap</a></li>
           <li><a href="#help">Help</a></li>
         </ul>
       </nav>
@@ -288,6 +289,138 @@
         </div>
       </div>
     </div>
+  </section>
+
+  <section id="roadmap" class="section">
+  <h2 class="sectionh" align="center">Roadmap</h2>
+  <div class="infos roadmap">
+    <div class="roadmap-step completed">
+      <div class="roadmap-icon">
+        <span class="material-symbols-rounded" style="color: #4caf50;">check_circle</span>
+      </div>
+      <div class="roadmap-content">
+        <h3>Launch</h3>
+        <p>Initial release of ApkJoy with core features.</p>
+      </div>
+    </div>
+    <div class="roadmap-step">
+      <div class="roadmap-icon">
+        <span class="material-symbols-rounded" style="color: #ffc107;">star</span>
+      </div>
+      <div class="roadmap-content">
+        <h3>Marking Apps as Favourite</h3>
+        <p>Ability to mark and filter your favourite apps for quick access.</p>
+      </div>
+    </div>
+    <div class="roadmap-step">
+      <div class="roadmap-icon">
+        <span class="material-symbols-rounded" style="color: #2196f3;">folder</span>
+      </div>
+      <div class="roadmap-content">
+        <h3>List Extracted Apps</h3>
+        <p>View and manage all APKs you've extracted within the app.</p>
+      </div>
+    </div>
+    <div class="roadmap-step">
+      <div class="roadmap-icon">
+        <span class="material-symbols-rounded" style="color: #9c27b0;">palette</span>
+      </div>
+      <div class="roadmap-content">
+        <h3>Custom Themes</h3>
+        <p>Choose from multiple color themes to personalize your experience.</p>
+      </div>
+    </div>
+    <div class="roadmap-step">
+      <div class="roadmap-icon">
+        <span class="material-symbols-rounded" style="color: #ff5722;">translate</span>
+      </div>
+      <div class="roadmap-content">
+        <h3>Multi-language Support</h3>
+        <p>Support for more languages to reach a wider audience.</p>
+      </div>
+    </div>
+    <div class="roadmap-step details">
+      <div class="roadmap-icon">
+        <span class="material-symbols-rounded" style="color: #00bcd4;">info</span>
+      </div>
+      <div class="roadmap-content">
+        <h3>Show More App Details</h3>
+        <p>View detailed information about each app, such as version, permissions, install date, and more.</p>
+      </div>
+    </div>
+    <div class="roadmap-step">
+      <div class="roadmap-icon">
+        <span class="material-symbols-rounded" style="color: #607d8b;">bug_report</span>
+      </div>
+      <div class="roadmap-content">
+        <h3>Bug Fixes & Improvements</h3>
+        <p>Continuous updates for stability, performance, and new features.</p>
+      </div>
+    </div>
+  </div>
+  <style>
+  .roadmap {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 700px;
+    margin: 2rem auto 0 auto;
+  }
+  .roadmap-step {
+    display: flex;
+    align-items: flex-start;
+    background: #16232a;
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 2px 8px 0 rgba(0,60,78,0.13);
+    border-left: 6px solid #2196f3;
+    transition: background 0.2s;
+    }
+    .roadmap-step.completed {
+      border-left-color: #4caf50;
+      background: #1e2e22;
+      opacity: 0.92;
+    }
+    .roadmap-icon {
+      margin-right: 1.2rem;
+      font-size: 2.2rem;
+      display: flex;
+      align-items: center;
+      min-width: 2.2rem;
+      filter: drop-shadow(0 0 2px #0008);
+    }
+    .roadmap-content h3 {
+      margin: 0 0 0.2rem 0;
+      font-size: 1.15rem;
+      color: #7fd7ff;
+      letter-spacing: 0.01em;
+    }
+    .roadmap-content p {
+      margin: 0;
+      color: #b7c9d1;
+      font-size: 1rem;
+    }
+    /* New roadmap step for "Show More App Details" */
+    .roadmap-step.details {
+      border-left-color: #00bcd4;
+      background: #1a2630;
+    }
+    @media (max-width: 600px) {
+      .roadmap {
+        padding: 0 0.5rem;
+      }
+      .roadmap-step {
+        padding: 0.8rem 1rem;
+      }
+    }
+    @media (min-width: 500px) {
+      .roadmap-step {
+        min-width: 50vw;
+        width: 50rem;
+        max-width: 90%;
+      }
+    }
+    </style>
   </section>
 
   <section id="help" class="section">

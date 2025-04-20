@@ -70,6 +70,22 @@
   }
 }
 
+@keyframes bodyIntro {
+  0% {
+    backdrop-filter: blur(0px);
+    background-size: 200%;
+    
+  }
+  100% {
+    backdrop-filter: blur(5px);
+    background-size: 100%;
+  }
+  
+}
+
+body {
+  animation: bodyIntro 1.5s ease-in-out;
+}
 
 
 
@@ -151,7 +167,7 @@ header.visible {
 }
 
 #headcontent {
-  width: 85%;
+  width: 95%;
   max-width: fit-content;
   text-align: left;
   display: flex;
@@ -164,6 +180,8 @@ header.visible {
   box-shadow: 0 0px 2px 0px rgba(255, 255, 255, 0.274);
   scrollbar-width: none;
 }
+
+
 
 #headcontent::-webkit-scrollbar {
   display: none;
@@ -209,7 +227,7 @@ header.visible {
   max-width: 600px;
   height: auto;
   margin-bottom: 2rem;
-  animation: flyin 1s ease-in-out;
+  animation: flyin 1.5s ease-in-out;
 }
 .focus-image {
   width: 100%;
@@ -390,3 +408,60 @@ section ol li {
   font-size: 1rem;
   opacity: 0.9;
 }
+
+.roadmap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 700px;
+  margin: 2rem auto 0 auto;
+}
+.roadmap-step {
+  display: flex;
+  align-items: flex-start;
+  background: #16232a;
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 8px 0 rgba(0,60,78,0.13);
+  border-left: 6px solid #2196f3;
+  transition: background 0.2s;
+  }
+  .roadmap-step.completed {
+    border-left-color: #4caf50;
+    background: #1e2e22;
+    opacity: 0.92;
+  }
+  .roadmap-icon {
+    margin-right: 1.2rem;
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+    min-width: 2.2rem;
+    filter: drop-shadow(0 0 2px #0008);
+  }
+  .roadmap-content h3 {
+    margin: 0 0 0.2rem 0;
+    font-size: 1.15rem;
+    color: #7fd7ff;
+    letter-spacing: 0.01em;
+  }
+  .roadmap-content p {
+    margin: 0;
+    color: #b7c9d1;
+    font-size: 1rem;
+  }
+  @media (max-width: 600px) {
+    .roadmap {
+      padding: 0 0.5rem;
+    }
+    .roadmap-step {
+      padding: 0.8rem 1rem;
+    }
+  }
+  @media (min-width: 500px) {
+    .roadmap-step {
+      min-width: 50vw;
+      width: 50rem;
+      max-width: 90%;
+    }
+  }
