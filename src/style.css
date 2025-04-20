@@ -73,16 +73,10 @@
 @keyframes bodyIntro {
   0% {
     backdrop-filter: blur(0px);
-    background-size: 200%;
     
-  }
-  33% {
-    backdrop-filter: blur(0px);
-    background-size: 200%;
   }
   100% {
     backdrop-filter: blur(5px);
-    background-size: 100%;
   }
   
 }
@@ -231,7 +225,7 @@ header.visible {
   max-width: 600px;
   height: auto;
   margin-bottom: 2rem;
-  animation: flyin 1.5s ease-in-out;
+  animation: flyInUp 1.5s ease-in-out;
 }
 .focus-image {
   width: 100%;

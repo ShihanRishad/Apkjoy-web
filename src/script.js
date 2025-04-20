@@ -32,7 +32,7 @@ focusimgdiv.addEventListener('click', function () {
 });
 
 // Function to animate elements on scroll
-function animateOnScroll(selector, animationClass = "show", options = { threshold: 0.5 }) {
+function animateOnScroll(selector, animationClass = "show", options = { threshold: 0.3 }) {
     const elements = document.querySelectorAll(selector);
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
