@@ -53,7 +53,18 @@
 
 </head>
 <body>
-  <div id="bg-anim"></div>
+  <div class="tempShow" id="tempShow">
+    <div class="show">
+      <div class="close" onclick="tempShow.style.display='none'">
+        <span class="material-symbols-rounded">
+          close
+        </span>
+      </div>
+      <a href="https://peerlist.io/shihan/project/apkjoy">
+        <img src="/assets/banners/Launch.svg" alt="Live on Peelist!" width="150">
+      </a>
+    </div>
+  </div>
   <section id="focus">
     <div class="part">
       <div class="focus-image">
@@ -203,7 +214,7 @@
         <h3 class="boxh">Compatibility</h3>
         <div class="boxTxt">
           <p>
-            ApkJoy is compatible with all Android devices running Android 5.0 (Lollipop) and above.
+            ApkJoy is tailored for Android devices, with current support starting from Android 10 and newer. Efforts are underway to broaden compatibility for earlier Android versions.
           </p>
         </div>
       </div>
@@ -359,71 +370,7 @@
       </div>
     </div>
   </div>
-  <style>
-  .roadmap {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    max-width: 700px;
-    margin: 2rem auto 0 auto;
-  }
-  .roadmap-step {
-    display: flex;
-    align-items: flex-start;
-    background: #16232a;
-    border-radius: 1rem;
-    padding: 1rem 1.5rem;
-    box-shadow: 0 2px 8px 0 rgba(0,60,78,0.13);
-    border-left: 6px solid #2196f3;
-    transition: background 0.2s;
-    }
-    .roadmap-step.completed {
-      border-left-color: #4caf50;
-      background: #1e2e22;
-      opacity: 0.92;
-    }
-    .roadmap-icon {
-      margin-right: 1.2rem;
-      font-size: 2.2rem;
-      display: flex;
-      align-items: center;
-      min-width: 2.2rem;
-      filter: drop-shadow(0 0 2px #0008);
-    }
-    .roadmap-content h3 {
-      margin: 0 0 0.2rem 0;
-      font-size: 1.15rem;
-      color: #7fd7ff;
-      letter-spacing: 0.01em;
-    }
-    .roadmap-content p {
-      margin: 0;
-      color: #b7c9d1;
-      font-size: 1rem;
-    }
-    /* New roadmap step for "Show More App Details" */
-    .roadmap-step.details {
-      border-left-color: #00bcd4;
-      background: #1a2630;
-    }
-    @media (max-width: 600px) {
-      .roadmap {
-        padding: 0 0.5rem;
-      }
-      .roadmap-step {
-        padding: 0.8rem 1rem;
-      }
-    }
-    @media (min-width: 500px) {
-      .roadmap-step {
-        min-width: 50vw;
-        width: 50rem;
-        max-width: 90%;
-      }
-    }
-    </style>
   </section>
-
   <section id="help" class="section">
     <h2 class="sectionh" align="center">Help</h2>
     <div class="infos">
@@ -457,6 +404,19 @@
           </ol>
           <p>We appreciate your feedback and contributions!</p>
         </div>
+      </div>
+      <div class="box">
+        <h3 class="boxh">ApkJoy on Peerlist</h3>
+        <div class="boxTxt">
+          <p>
+            ApkJoy is launched on Peerlist! Check it out and support it, by engaging with the community.
+          </p>
+          <a href="https://peerlist.io/shihan" target="_blank">
+            <button class="btn action">
+              <img src="/assets/icons/peerlist.svg" alt="peerlist" width="20" height="20">
+              View on Peerlist
+            </button>
+          </a>
       </div>
     </div>
   </section>
