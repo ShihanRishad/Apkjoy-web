@@ -87,7 +87,6 @@ function setupActiveNav() {
     const customObserver = new IntersectionObserver((entries) => {
         if (isUserScrolling) return; 
         entries.forEach(entry => {
-            console.log(entry.target.id, entry.intersectionRatio); // Debug log
             if ((entry.target.id === 'intro' || entry.target.id === 'about' || entry.target.id === 'features') && entry.intersectionRatio > 0.2) {
                 navLinks.forEach(link => link.classList.remove('active'));
                 const activeLink = document.querySelector(`#headcontent nav ul li a[href="#${entry.target.id}"]`);
