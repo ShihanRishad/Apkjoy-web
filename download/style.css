@@ -93,3 +93,47 @@ a {
     height: 0;
     background: transparent;
 }
+
+pre {
+    position: relative;
+}
+
+.container pre {
+    background-color: #28323365;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0px 2px 0px rgba(255, 255, 255, 0.274);
+    overflow-x: auto;
+    width: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: #ffffff94 #28323300;
+}
+
+.prebox {
+    background-color: #28323365;
+    padding: 1rem;
+    border-radius: 20px;
+    box-shadow: 0 0px 2px 0px rgba(255, 255, 255, 0.274);
+    overflow-x: auto;
+    width: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: #ffffff94 #28323300;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.copy {
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem;
+    align-self: flex-end;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.copy:hover {
+    background-color: #ffffff1f;
+    cursor: pointer;
+}
