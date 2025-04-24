@@ -6,7 +6,7 @@ function copy() {
 
     if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(code).then(() => {
-            console.log('Code copied to clipboard!');
+            console.log('Copied to clipboard!');
         }).catch(err => {
             console.error('Error copying code: ', err);
         });

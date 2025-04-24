@@ -137,3 +137,12 @@ pre {
     background-color: #ffffff1f;
     cursor: pointer;
 }
+
+.copy:active {
+    background-color: #ffffff56;
+    cursor: pointer;
+}
+.copy:focus {
+    outline: none;
+    background-color: #ffffff1f;
+}
