@@ -131,6 +131,7 @@ pre {
     align-self: flex-end;
     margin-top: 1rem;
     transition: background-color 0.3s;
+    position: relative; /* allow absolute tooltip inside */
 }
 
 .copy:hover {
@@ -145,4 +146,26 @@ pre {
 .copy:focus {
     outline: none;
     background-color: #ffffff1f;
+}
+
+/* floating tooltip shown after copying */
+.copy-tooltip {
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 0.5rem);
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.85);
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.12s ease-in-out, transform 0.12s ease-in-out;
+}
+.copy .copy-tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-4px);
 }
