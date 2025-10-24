@@ -58,7 +58,7 @@ onload = function() {
 
         if (navigator.clipboard && navigator.clipboard.writeText) {
             navigator.clipboard.writeText(code).then(() => {
-                setIconToTickFor(3000);
+                setIconToTickFor(1500);
             }).catch(err => {
                 console.error('Error copying code: ', err);
             });
