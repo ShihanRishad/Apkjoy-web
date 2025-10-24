@@ -15,16 +15,18 @@ onload = function() {
         icon.textContent = 'task_alt';
 
         // show floating "Copied!" tooltip
+        // if a tooltip already exists, remove it first so the animation restarts
         let tip = copyBtn.querySelector('.copy-tooltip');
-        if (!tip) {
-            tip = document.createElement('span');
-            tip.className = 'copy-tooltip';
-            tip.textContent = 'Copied!';
-            copyBtn.appendChild(tip);
-            // force reflow to allow CSS animations if any
-            // eslint-disable-next-line no-unused-expressions
-            tip.offsetHeight;
+        if (tip) {
+            try { tip.parentNode.removeChild(tip); } catch (e) { /* ignore */ }
+            tip = null;
         }
+
+        // create new tooltip and start entrance animation
+        tip = document.createElement('span');
+        tip.className = 'copy-tooltip show';
+        tip.textContent = 'Copied!';
+        copyBtn.appendChild(tip);
 
         // clear previous timers if any
         if (iconResetTimer) clearTimeout(iconResetTimer);
@@ -35,8 +37,15 @@ onload = function() {
             iconResetTimer = null;
         }, duration);
 
+        // hide tooltip with exit animation before removing it so animation is visible
         tooltipTimer = setTimeout(() => {
-            if (tip && tip.parentNode) tip.parentNode.removeChild(tip);
+            if (!tip) { tooltipTimer = null; return; }
+            tip.classList.remove('show');
+            tip.classList.add('hide');
+            // remove after exit animation (match duration in CSS: 140ms)
+            setTimeout(() => {
+                if (tip && tip.parentNode) tip.parentNode.removeChild(tip);
+            }, 160);
             tooltipTimer = null;
         }, duration);
     }

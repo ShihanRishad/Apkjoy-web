@@ -161,11 +161,37 @@ pre {
     font-size: 0.75rem;
     white-space: nowrap;
     box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-    opacity: 0;
     pointer-events: none;
-    transition: opacity 0.12s ease-in-out, transform 0.12s ease-in-out;
+    /* start invisible; entrance animation will bring it in */
+    opacity: 0;
 }
-.copy .copy-tooltip {
-    opacity: 1;
-    transform: translateX(-50%) translateY(-4px);
+
+@keyframes copyTooltipIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(6px) scale(0.96);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-4px) scale(1);
+    }
+}
+
+@keyframes copyTooltipOut {
+    0% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-4px) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(6px) scale(0.96);
+    }
+}
+
+.copy-tooltip.show {
+    animation: copyTooltipIn 180ms cubic-bezier(.2,.9,.2,1) both;
+}
+
+.copy-tooltip.hide {
+    animation: copyTooltipOut 140ms cubic-bezier(.2,.9,.2,1) both;
 }
